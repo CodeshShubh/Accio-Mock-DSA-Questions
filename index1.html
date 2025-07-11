@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         
+//  Question 1 (Given)
+// Q: Given an array of integers and an integer K, find the count of pairs of elements in the array whose sum is equal to K.
+
+
+// let pairs = []
+// function intPairs(Arr,k){
+//     for(let i=0; i<Arr.length; i++){
+//          for(let j=i+1; j<Arr.length; j++){
+//             if(Arr[i]+Arr[j]===k){
+//                 pairs.push([Arr[i] , Arr[j]])
+//             }
+//          }
+//     }
+// }
+
+// intPairs([3,9,1,5,3,4,2,8,7],8)
+
+// console.log(pairs.length)
+
+
+
+// function countPairs(arr, K) {
+//   let count = 0;
+//   let map = new Map();
+
+//   for (let num of arr) {
+//     let complement = K - num;
+//     if (map.has(complement)) {
+//       count += map.get(complement);
+//     }
+//     map.set(num, (map.get(num) || 0) + 1);
+//   }
+
+//   return count;
+// }
+
+// // Example:
+// console.log(countPairs([1, 5, 7, -1, 5], 6)); // Output: 3
+
+
+
+
+
+
+// ✅ Question 2 (Given)
+// Q:
+// You have a sequence p1, p2, p3, ..., pn which is a permutation of {1, 2, 3, ..., n}.
+// You can do the following operation at most 1 time: Choose 2 indices i and j and swap pi and pj.
+// Can you sort the permutation?
+
+
+
+// let arr = [4,2,3,1,5,7,6] 
+
+// function sortSwap(){
+//     let mismatch =[]
+
+//     let sortArr = [...arr].sort((a,b)=>a-b)
+
+//     for(let i=0; i<arr.length; i++){
+//         if(arr[i]!==sortArr[i]){
+//             mismatch.push(i)
+//         }
+//     }
+
+//     if(mismatch.length==0){
+//         return 'yes'
+//     }
+//     if(mismatch.length !==2){
+//         return 'no'
+//     }
+
+//     let [i,j] = mismatch;
+
+//     [arr[i], arr[j]] = [arr[j],arr[i]]
+
+//   for(let k=0; k<arr.length; k++){
+//      if(arr[k]>arr[k+1]){
+//         return 'no'
+//      }
+//   }
+
+//   return 'yes'
+
+// }
+
+// console.log(sortSwap(arr))
+
+
+
+
+
+
+// let arr = [4,2,3,1,5] 
+
+
+// let sortArr = [...arr].sort((a,b)=>a-b);
+
+// let unmatch = []
+
+
+// function sort1Swap(arr){
+//     for(let i=0; i<arr.length; i++){
+//         if(arr[i] !==i+1){
+//             unmatch.push(i)
+//         }
+//     }
+//     if(unmatch.length<=0){
+//         return 'no'
+//     }else if(unmatch.length ==2){
+//             return 'yes'
+//     }else{
+//          return 'no'
+//     }
+// }
+
+// console.log(sort1Swap(arr))
+
+
+// ✅ Question 3 (Given)
+// Q:
+// Given an integer array nums, return true if any value appears at least twice in the array, and false if every element is distinct.
+
+
+// let arr = [1,2,3,4,5,6,7,3]
+
+
+//  function unique(arr){
+//     let repeat = 0
+//      for(let i=0; i<arr.length;  i++){
+//      for(let j=i+1; j<arr.length; j++){
+//         if(arr[i]==arr[j]){
+//              repeat++
+//         }
+//      }
+// }
+
+// if(repeat>0){
+//     return 'yes'
+// }else if(repeat==0){
+//     return 'no'
+// }
+//  }
+
+//  console.log(unique(arr))
+
+
+
+
+// let arr = [1,2,3,4,5,6,7]
+
+
+// let seen = new Set ()
+
+// function unique(arr){
+//     for(let nums of arr){
+//     if(seen.has(nums)){
+//         return true
+//     }else{
+//         seen.add(nums)
+//     }
+    
+// }
+// return false
+// }
+
+// console.log(unique(arr))
+
+
+
+
+// ✅ Question 4 (Given)
+// Q:
+// Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+
+// let s = 'listen'
+// let t = 'silent'
+
+// let sSort = s.split('').sort().join('')
+// let tSort = t.split('').sort().join('')
+
+// if(sSort==tSort){
+//     console.log('angram')
+// }else{
+//     console.log('no')
+// }
+
+
+
+
+
+// ✅ Question 5 (Given)
+// Q:
+// Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+
+// let arr = [3, 2, 4]
+// let t = 6
+
+// let pairs = []
+
+// for(let i=0; i<arr.length; i++){
+//     for(let j=i+1; j<arr.length; j++){
+//          if(arr[i]+arr[j]==t){
+//           pairs.push([i, j])
+//          }
+//     }
+// }
+// console.log(pairs)
+
+
+// let arr = [3, 2, 4, 5, 1]
+// let t = 6
+
+
+// let seen = new Map()
+
+// let pairs = []
+
+// for(let i=0; i<arr.length; i++){
+
+//     let compliment = t-arr[i] // 6
+//     if(seen.has(compliment)){
+//        pairs.push([seen.get(compliment), i])
+//     }else{
+//         seen.set(arr[i], i)
+//     }
+// }
+// console.log(seen)
+// console.log(pairs)
+
+
+
+
+
+// ✅ Question 6 (Given)
+// Q:
+// Given an array of strings strs, group the anagrams together.You can return the answer in any order.
+
+
+
+// let strArr = ["eat","tea","tan","ate","nat","bat"]
+
+// function anagrams(strArr){
+//      let seen = new Map()
+
+//      for(let i=0; i<strArr.length; i++){
+
+//          let key = strArr[i].split('').sort().join('')
+//         if(!seen.has(key)){
+           
+//             seen.set(key,[])
+
+//         }
+//             seen.get(key).push(strArr[i])
+
+//      }
+//      return Array.from(seen.values())
+     
+//     }
+
+//     console.log(anagrams(strArr))
+
+
+// ✅ Question 7 (Given)
+// Q:
+// Given an integer array nums and an integer k, return the k most frequent elements.
+// You may return the answer in any order.
+
+
+// let nums = [1,1,1,2,2,3]
+// let k = 2
+
+
+// let freq = nums.reduce((acc,elem)=>{
+
+//    acc[elem]  = (acc[elem] || 0) +1
+//      return acc
+// },{})
+
+// let freqArr = Object.keys(freq)
+
+// console.log(freq)
+// console.log([freqArr[0], freqArr[1]])
+
+
+
+// ✅ Question 8 (Given)
+// Q:
+// A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward.
+// Write a function that checks if a given string is a valid palindrome.
+
+
+
+
+// let str = 'A man, a plan, a canal: Panama'
+
+
+//  let newStr = str.split('')
+
+//  let updatedStr = []
+
+//  for(let i=0; i<newStr.length; i++){
+//      if(newStr[i]>='a' && newStr[i]<="z" || newStr[i]>='A' && newStr[i]<="Z" || newStr[i]>='0' && newStr[i]<="9"){
+//          updatedStr.push(newStr[i].toLowerCase())
+//      }
+//  }
+
+//  let reverse = updatedStr.reverse().join('')
+
+//  if(reverse==updatedStr.reverse().join('')){
+//     console.log('palindrome')
+//  }else{
+//     console.log('no')
+//  }
+
+// let str = 'race a car'
+
+
+// function palindrome (){
+//     let newStr = str.replace(/[^a-zA-Z0-9]/g,'').toLocaleLowerCase()
+//     let left =0
+//     let right=newStr.length-1
+
+//     while(left<right){
+//         if(newStr[left]!==newStr[right]){
+//             return false
+//         }
+//         left++
+//         right--
+//     }
+//     return true
+
+// }
+
+// console.log(palindrome())
+
+
+
+
+// function targetIndex(arr,t){
+// let index = []
+// let left=0;
+// let right=arr.length-1;
+
+// while(left<right){
+//     let sum = arr[left]+arr[right]
+//     if(sum==t){
+//         return [left+1, right+1]
+//     }else if(sum<t){
+//         left++
+//     }else{
+//         right--
+//     }
+// }
+// return []
+
+// }
+
+
+// console.log(targetIndex([2, 7, 11, 15], 9))
+
+
+
+
+// ✅ Similar Question 1 (New)
+// Q:
+// 🔹 Find all unique pairs in an array whose difference is equal to a given number K.
+
+// 👉 This is similar to your “sum equal to K” problem, but here you check for a difference instead.
+
+
+
+// let arr = [1, 5, 3, 4, 2,0]
+// let k = 3
+
+
+// function diffPairs(arr,k){
+//     let map = new Map();
+//     let set = new Set();
+
+
+//     for(let num of arr){
+//         let sum = num+k;
+//         let diff = num-k
+
+//         if(map.has(sum)){
+//             let pair = [Math.min(num,sum), Math.max(num,sum)]
+//             set.add(pair.toString())
+//         }
+//         if(map.has(diff)){
+//             let pair = [Math.min(num,diff), Math.max(num,diff)]
+//             set.add(pair.toString())
+//         }
+//         map.set(num, (map.get(num)||0)+1)
+//     }
+
+//     let pairs = Array.from(set).map((set)=>set.split(',').map(Number))
+
+//     return pairs
+// }
+
+// console.log(diffPairs(arr,k))
+
+
+// ✅ Bonus Question (Same Level)
+// 🔹 Given a string, find the most frequent character and its frequency.
+// 👉 Similar to “frequency of characters”, but now you find which character occurs the most.
+
+// let str = 'accciojob'
+
+// function freqChar(){
+//     let freq = new Map();
+//     for(let char of str){
+//         if(freq.has(char)){
+//            freq.set(char, (freq.get(char))+1)
+//         }else{
+//             freq.set(char , 1)
+//         }
+//     }
+//      let maxcount =0;
+//      let maxChar=''
+//      for(let [char,count] of freq){
+//           if(count>maxcount){
+//              maxcount = count;
+//              maxChar = char
+//           }
+//      }
+//      console.log(maxChar)
+// }
+
+// freqChar()
+
+
+
+
+// ✅ Similar Question 15 (New)
+// 🔹 Given a string, count how many uppercase and lowercase letters it contains.
+// 👉 This is a practical twist on your “character frequency” — now you classify each letter as uppercase or lowercase and count them.
+
+
+// let str = "Acciojob"
+
+// function upperLowerLatter(){
+//     let lowerCount =0;
+//     let upperCount=0;
+//     for(let char of str){
+//         if(char>='a' && char<='z'){
+//             lowerCount++
+//         }
+//         if(char>='A' && char<='Z'){
+//             upperCount++
+//         }
+//     }
+//     return `lowerCount ->${lowerCount} and upperCount ->${upperCount}` 
+// }
+// console.log(upperLowerLatter())
+
+
+
+// ✅ Similar Question 14 (New)
+// 🔹 Given a string, check if it is a pangram.
+// 👉 A pangram is a sentence containing every letter of the alphabet at least once.
+// It’s a good twist on your frequency and classification questions!
+
+// let str = 'Acciojob is the E-Learnig Plateform';
+
+// function panagram(){
+//     let newStr = new Set(str.toLocaleLowerCase())
+    
+//     let count =0
+//     for(let char of newStr){
+//          if(char>='a' && char<='z'){
+//             count++
+//          }
+//     }
+    
+//     if(count==26){
+//         return true
+//     }else{
+//         return false
+//     }
+    
+// }
+
+// console.log(panagram())
+
+
+
+
+
+// ✅ Similar Question 13 (New)
+// 🔹 Given a string, return a count of how many vowels and consonants it contains. Ignore digits and special characters.
+
+// 👉 This is a practical twist on your frequency counting — now you classify characters as vowels or consonants and count them.
+
+// let str = 'Hello World! 123'
+// let vowels = 0
+// let consonants =0
+
+// function count(){
+//     let newStr = str.toLocaleLowerCase()
+
+//     for(let char of newStr){
+//         if('aeiou'.includes(char)){
+//             vowels++
+//         }else if('bcdfghjklmnpqrstvwxyz'.includes(char)){
+//             consonants++
+//         }
+//     }
+//     return (`${vowels}-${consonants}`)
+// }
+// console.log(count())
+
+
+
+// ✅ Similar Question 12 (New)
+// 🔹 Given a string, return a new string with all duplicate characters removed, but keep the original order of first appearance.
+// 👉 This is slightly different from your “unique characters” — here, you keep only the first occurrence of each character and build a cleaned string.
+
+// let str = 'programming'
+
+
+// function firstUnique(){
+//   let uinque = new Set(str)
+//    let newStr = ''
+//   for(let char of uinque){
+//          newStr +=char
+//   }
+//   return newStr
+// }
+// console.log(firstUnique())
+
+
+
+
+//  Similar Question 11 (New)
+// 🔹 Given an array of strings, find the string with the highest frequency. If multiple strings have the same highest frequency, return any one of them.
+
+// 👉 This is like your “frequency of characters” — but now it’s for strings in an array instead of letters in one string.
+
+// let strArr = ["apple", "banana", "apple", "orange", "banana", "apple"]
+
+
+// const highestFrq =()=>{
+//     let map = new Map()
+//     for(let str of strArr){
+//         if(!map.has(str)){
+//             map.set(str,1)
+//         }else{
+//             map.set(str,(map.get(str) || 0)+1)
+//         }
+//     }
+//     let maxKey = ''
+//     let maxCount =0
+//     for(let [item , count] of map){
+//         if(maxCount<=count){
+//             maxCount = count;
+//             maxKey =item
+//         }
+//     }
+//     return maxKey
+// }
+// console.log(highestFrq())
+
+// ✅ Similar Question 10 (New)
+// Q:
+// 🔹 Given a character, check if it is a vowel, consonant, digit, or special character.
+// 👉 This extends your original “alphabet, number, or special” — but now you split alphabets into vowel or consonant.
+
+// let input ='!'
+
+// function charecter(){
+//     if(input>='a' && input<='z' || input>='A' && input<='Z' ){
+//         if('aeiou'.includes(input)){
+//             return 'vowel'
+//         }else{
+//             return 'consonent'
+//         } 
+//     }
+//      if(input>='0' && input<='9'){
+//             return 'digit'
+//         }else{
+//             return 'special charecter'
+//         }
+// }
+// console.log(charecter())
+
+
+
+
+// ✅ Similar Question 9 (New)
+// Q:
+// 🔹 Given a string, check if all characters have the same frequency.
+// 👉 This is a twist on your “frequency of every character” — but here you check if all characters appear the same number of times.
+
+
+// function freqCheck(str){
+//     let map = new Map()
+//     for(let char of str){
+//          if(!map.has(char)){
+//             map.set(char, 1)
+//          }else{
+//             map.set(char, map.get(char)+1)
+//          }
+//     }
+//     let value = [...map.values()]
+//      let length = value.length;
+//      let count =0
+
+//      for(let num of value){
+//        if(value[0]==num){
+//         count++
+//        }
+//      }
+//      if(count==length){
+//         return true
+//      }else{
+//         return false
+//      }
+     
+// }
+// console.log(freqCheck('aabbccc'))
+
+
+
+
+
+// ✅ Similar Question 8 (New)
+// Q:
+// 🔹 Given a string, return the first non-repeating character. If there’s no unique character, return null.
+// 👉 This is a twist on your “return unique characters” — but here you only care about the first unique one.
+
+
+// function firstUnique(str){
+//  let map = new Map()
+
+//    for(let char of str){
+//       if(!map.has(char)){
+//          map.set(char,1)
+//       }else{
+//         map.set(char,map.get(char)+1)
+//       }
+//    }
+     
+//    for(let[key,value] of map){
+//        if(value==1){
+//         return key
+//        }else{
+//         return null
+//        }
+//    }
+
+// }
+
+// console.log(firstUnique('aabbcc'))
+
+
+
+
+
+
+// ✅ Similar Question 7 (New)
+// Q:
+// 🔹 Given an array of integers, find the second smallest and third smallest unique elements.
+// 👉 This is a variation of your “second and third maximum” — but now you find the smallest instead of maximum.
+
+
+// let arr  = [7, 2, 5, 1, 4, 2, 1]
+
+// function smallest(arr){
+//     let sortAndUniqueArrr = new Set(arr.sort((a,b)=>a-b))
+//     let newArr = [...sortAndUniqueArrr]
+    
+//     return `${newArr[1]}-${newArr[2]}`
+    
+
+// }
+
+// console.log(smallest(arr))
+
+
+
+// ✅ Similar Question 6 (New)
+// Q:
+// 🔹 Given an array of integers, merge two sorted subarrays within it into a single sorted array.
+// 👉 This is a twist on your “merge two sorted arrays” — but here the two sorted parts are inside one array.
+//  let mergeleft =
+
+
+
+// ✅ Similar Question 5 (New)
+// Q:
+// 🔹 Given an array of integers and an integer target, return true if there exist three numbers whose sum equals the target.
+// 👉 This is a simpler twist on your “3Sum” question — but instead of finding all unique triplets, you only check if at least one valid triplet exists.
+
+// let num = [12, 3, 4, 1, 6, 9]
+// let target = 24
+
+
+// function threeSum(){
+//    let triplate =[]
+//    for(let i=0; i<num.length-2; i++){
+//      let start =i+1;
+//      let end = num.length-1
+//      while(start<end){
+//         let sum = num[i]+num[start]+num[end]
+//         if(sum==target){
+//             triplate.push([num[i],num[start],num[end]])
+//             start++;
+//             end--;
+//         }else if(sum<target){
+//                start++
+//         }else{
+//             end--
+//         }
+//      }
+//    }
+//    return triplate
+// }
+
+// console.log(threeSum())
+
+
+
+// ✅ Similar Question 2 (New)
+// Q:
+// 🔹 **You have a sequence p1, p2, p3, ..., pn which is a permutation of {1, 2, ..., n}.
+// You can do the following operation at most once: Choose 2 indices i and j, and swap p[i] and p[j].
+// Can you make the permutation non-increasing (sorted descending) with at most one swap?
+
+// 👉 This is a twist on your original “can you sort the permutation with one swap” — but now, it must be sorted in descending order instead of ascending.
+
+// let arr = [5, 4, 3, 2, 1]
+
+
+// function permutation(){
+//     let diff = []
+//     let sortArr = arr.sort((a,b)=>b-a)
+
+//     for(let i=0; i<arr.length; i++){
+//         if(arr[i]!==sortArr[i]){
+//             diff.push(i)
+//         }
+//     }
+//     if(diff.length==0) return true
+//     if(diff.length!==2) return false
+
+//     [i,j] = diff
+
+//     [arr[i], arr[j]] =[arr[j], arr[i]]
+
+//     for(let k=0; k<arr.length; k++){
+//         if(arr[k]<arr[k+1]){
+//             return false
+//         }
+//     }
+//     return true
+
+// }
+
+
+
+
+// ✅ Similar Question 1 (New)
+// Q:
+// 🔹 Find all unique pairs in an array whose difference is equal to a given number K.
+
+// 👉 This is similar to your “sum equal to K” problem, but here you check for a difference instead.
+
+// let arr = [1, 5, 3, 4, 2] 
+// let k = 2
+
+// function differencePair(){
+//     let map = new Map()
+//     let pairs = []
+//     for(let num of arr){
+//         map.set(num, (map.get(num)||0)+1)
+//     }
+//     for(let num of arr){
+//         if(map.has(num+k)) {       // num1-num2=k
+//             pairs.push([num , num+k])
+//         }    
+//         if(map.has(num-k)){
+//             pairs.push([num, num-k])
+//         }        
+//       map.delete(num)
+//     }
+//     return pairs
+
+// }
+
+// console.log(differencePair())
+
+
+
+// Quick sort 
+
+function quickSort(arr){
+     if(arr.length<=1) return arr
+
+     let pviot = arr[arr.length-1]
+     let left =[];
+     let right=[];
+     for(let i=0; i<arr.length-1; i++){
+        if(arr[i]<pviot){
+            left.push(arr[i])
+        }else{
+            right.push(arr[i])
+        }
+     }
+    return [...quickSort(left), pviot, ...quickSort(right)]
+}
+
+console.log(quickSort([4,2,8,5,1,3,0,9,7,6]))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+
+    </script>
+</body>
+</html>
+
+
+
+
