@@ -65,6 +65,69 @@
 // console.log(quickSort([6,1,4,2,8,0,3,7,9,5])
 // )
 
+// 
+
+// selection sort
+
+// let arr = [6,1,4,2,8,0,3,7,9,5];
+
+
+// for(let i=0; i<arr.length; i++){
+//     let minIndex = i;
+//     for(let j=i+1; j<arr.length; j++){
+//         if(arr[j]<arr[minIndex]){
+//             minIndex=j
+//         }
+//     }
+//     let temp = arr[minIndex];
+//     arr[minIndex] = arr[i]
+//     arr[i]=temp
+// }
+
+// console.log(arr)
+
+
+
+
+// insertion sort
+
+// let arr = [6,1,4,2,8,0,3,7,9,5];
+
+// for(let i=1; i<arr.length; i++){
+//     let current = arr[i]
+//     let j=i-1;
+//     while(j>=0 && arr[j]>current){
+//           arr[j+1]=arr[j]
+//            j--
+//         }
+//       arr[j+1] = current
+// }
+
+// console.log(arr)
+
+
+// binary Search 
+      let arr = [5, 14, 23, 12, 89, 17, 19, 21];
+     let target =21;
+     let sortArr = arr.sort((a,b)=>a-b)
+
+     function binarySearch(sortArr){
+        let l=0;
+        let r=sortArr.length-1;
+        while(l<=r){
+            let m = Math.floor((l+r)/2)
+             
+            if(sortArr[m]===target){
+                return m
+            }else if(sortArr[m]>target){
+                r=m-1
+            }else{
+                l=m+1
+            }
+        }
+     }
+
+console.log(binarySearch(sortArr))
 
 
 
