@@ -42,15 +42,21 @@
 
 
 
-// QuickSort
+
+
+// quick sort 
+
+
+// let arr = [6,2,5,1,3,0,8,9,7,4]
 
 
 // function quickSort(arr){
-//     if(arr.length<=1) return arr
+//     if(arr.length<=1) return arr;
 
 //     let pviot = arr[arr.length-1]
-//     let left =[]
-//     let right =[]
+//     let left =[];
+//     let right=[];
+
 //     for(let i=0; i<arr.length-1; i++){
 //         if(arr[i]<pviot){
 //             left.push(arr[i])
@@ -59,75 +65,57 @@
 //         }
 //     }
 
-//     return [...quickSort(left), pviot, ...quickSort(right)]
+//     return [...quickSort(left), pviot, ...quickSort(right) ]
 // }
-
-// console.log(quickSort([6,1,4,2,8,0,3,7,9,5])
-// )
-
-// 
-
-// selection sort
-
-// let arr = [6,1,4,2,8,0,3,7,9,5];
+// console.log(quickSort(arr))
 
 
-// for(let i=0; i<arr.length; i++){
-//     let minIndex = i;
-//     for(let j=i+1; j<arr.length; j++){
-//         if(arr[j]<arr[minIndex]){
-//             minIndex=j
+
+// Given an array of integers, check if there exists a subarray with sum equal to 0.
+
+
+// function subarray(arr,sum){
+//     for(let i=0; i<arr.length-2; i++){
+//         for(let j=i+1; j<arr.length-1; j++){
+//             for(let k=j+1; k<arr.length; k++){
+//                 if(arr[i]+arr[j]+arr[k]==0){
+//                     return [arr[i], arr[j], arr[k]]
+//                 }
+//             }
 //         }
 //     }
-//     let temp = arr[minIndex];
-//     arr[minIndex] = arr[i]
-//     arr[i]=temp
 // }
 
-// console.log(arr)
+// console.log(subarray([4, 2, -3, 1, 6],0))
 
 
 
 
-// insertion sort
-
-// let arr = [6,1,4,2,8,0,3,7,9,5];
-
-// for(let i=1; i<arr.length; i++){
-//     let current = arr[i]
-//     let j=i-1;
-//     while(j>=0 && arr[j]>current){
-//           arr[j+1]=arr[j]
-//            j--
-//         }
-//       arr[j+1] = current
-// }
-
-// console.log(arr)
 
 
-// binary Search 
-      let arr = [5, 14, 23, 12, 89, 17, 19, 21];
-     let target =21;
-     let sortArr = arr.sort((a,b)=>a-b)
 
-     function binarySearch(sortArr){
-        let l=0;
-        let r=sortArr.length-1;
-        while(l<=r){
-            let m = Math.floor((l+r)/2)
-             
-            if(sortArr[m]===target){
-                return m
-            }else if(sortArr[m]>target){
-                r=m-1
-            }else{
-                l=m+1
-            }
-        }
-     }
+console.log(findDuplicates([4, 3, 2, 7, 8, 2, 3, 1]));
 
-console.log(binarySearch(sortArr))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
