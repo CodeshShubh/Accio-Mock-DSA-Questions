@@ -852,6 +852,85 @@
 
 
 
+// let s = 'abcabcdbb'
+
+// function logestUniqueSubstring(s){
+//    let set = new Set()
+//     let start=0;
+//     let maxLength=0;
+//     let left=0;
+
+//     for(let right=0; right<s.length; right++){
+
+//         while(set.has(s[right])){
+//             set.delete(s[left])
+//             left++
+//         }
+//         set.add(s[right])
+
+//         if(right-left+1 >maxLength){
+//             maxLength=right-left+1;
+//             start=left
+//         }
+
+//     }
+//     return s.substring(start, start+maxLength)
+// }
+
+// console.log(logestUniqueSubstring(s))
+
+
+
+// let s = 'kjhsdlkfh'
+
+// function longestSubstring(s){
+//     let left=0;
+//     let maxLength=0;
+//     let start=0;
+//     let set = new Set()
+
+//     for(let right=0; right<s.length; right++){
+//         while(set.has(s[right])){
+//             set.delete(s[right])
+//             left++
+//         }
+//         set.add(s[right])
+
+//         if(right-left+1>maxLength){
+//             maxLength=right-left+1
+//             start=left
+//         }
+//     }
+//     return s.substring(start, start+maxLength).length
+
+// }
+
+// console.log(longestSubstring(s))
+
+function countPairs(arr,target)
+{
+    let map = new Map();
+    let pairs=[]
+
+    for(let nums of arr){
+        let compliment = target-nums
+        if(map.has(compliment)){
+           pairs.push([nums, compliment])
+        }
+        map.set(nums,(map.get(nums) ||0)+1)
+    }
+   return pairs
+}
+console.log(countPairs([1, 5, 7, -1, 5], 6));
+
+
+
+//Array.from(set).map((p)=>p.split(',').map(Number))
+
+//  set.add([nums, compliment].sort((a,b)=>a-b).join(','))
+
+
+
 
 
 
