@@ -21,12 +21,103 @@
 //     console.log('no')
 // }
 
+// console.log([] == false);
+// console.log({}==false)
+// console.log([] == ![]);
+// console.log([]==[])
+// console.log([1]==[1])
+// console.log({}=={})
+// console.log(''==false)
+// console.log(0==false)
+// console.log(typeof NaN) //number
+// console.log(true==false)
+// console.log(NaN==NaN)
+
+
 // use of only async
 //  async function fo(){
 //    return 1
 // }
 
 // fo().then(console.log)
+
+
+
+// last function override wins ->
+
+// function foo() {
+//   console.log("First");
+// }
+
+// function foo() {
+//   console.log("Second");
+// }
+// function foo(){
+//     console.log('third')
+// }
+
+// foo();
+
+
+// in this we loose this becase of ditaching of greet() function
+// class Person {
+//   constructor(name) {
+//     this.name = name;
+//   }
+//   greet() {
+//     return `Hi, I'm ${this.name}`;
+//   }
+// }
+
+// const p = new Person("Shubhanshu");
+// const greet = p.greet;
+// console.log(greet());
+
+
+// prototype chain 
+
+
+// let n=4
+
+// for(let i=0; i<4; i++){
+
+//        let diff=''
+
+//     for(let j=0; j<4; j++){
+//           diff += ''+n-j
+
+//     }
+//     console.log(diff)
+// }
+
+// trans
+// let arr=[[1,2,3],[4,5,6],[7,8,9]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
