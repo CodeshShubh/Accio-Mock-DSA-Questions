@@ -8,180 +8,39 @@
 <body>
     <script>
 
-// transpose of matrix
+// travrsal of 2d matrix ->
 
-// let matrix = [
-//     [1,2,3],
-//     [4,5,6],
-//     [7,8,9]
-// ]
-
-
-// function tranposeMatrix(matrix){
-//    let rows=matrix.length;
-//    let cols=matrix[0].length;
-//     let result= Array.from({length:cols},()=>Array(rows).fill(0))
-//     console.log(result)
-//  for(let i=0; i<rows; i++){
-//      for(let j=0; j<cols; j++){
-//           result[i][j]=matrix[j][i]
-//      }
-//  }
-// }
-
-
-
-// tranposeMatrix(matrix)
-// let matrix = [
-//     [1,2,3],
-//     [4,5,6],
-//     [7,8,9]
-// ]
-
-
-// function rotationOfMatrix(matrix){
-
-//     let rows=matrix.length;
-//     let cols=matrix[0].length;
-
-//      let result = Array.from({length:cols},()=> Array(rows).fill(0))
-
-//      for(let i=0; i<rows; i++){
-//         for(let j=0; j<cols; j++){
-//              result[i][j]=matrix[j][i]
-//         }
-//      }
-   
-//      for(let row of result){
-//         row.reverse()
-//      }
-//      console.log(result)
-// }
-
-
-
-// rotationOfMatrix(matrix)
-
-
-
-
-
-
-// let matrix = [
-//     [1,2,3],
-//     [4,5,6],
-//     [7,8,9]
-// ]
-
-
-// function spiralMatrix(matrix){
-//    let top=0;
-//    let bottom=matrix.length-1
-//    let left=0;
-//    let right=matrix[0].length-1
-//    let result=[]
-//    while(top<=bottom && left<=right){
-//      //left to right
-//      for(let i=left; i<=right; i++ ){
-//        result.push(matrix[top][i])
-//      }
-//      top++
-
-// top to bottom
-    //  for(let i=top; i<=bottom; i++){
-    //     result.push(matrix[i][right])
-    //  }
-    //  right--
-
-     // right to left
-
-//      if(top<=bottom){
-//          for(let i=right; i>=left; i--){
-//              result.push(matrix[bottom][i])
-//          }
-//          bottom--
-//      }
-
-//     //  bottom to top
-//      if(left<=right){
-//         for(let i=bottom; i>=top; i--){
-//             result.push(matrix[i][left])
-//         }
-//         left++
-//      }
-
-
-//    }
-//    return result
-// }
-
-// console.log(spiralMatrix(matrix))
-
-
-
-// find target
-
+// 1-> row wise travrsal
 let matrix = [
-  [1, 4, 7],
-  [2, 5, 8],
-  [3, 6, 9]
-]
-let target = 5
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
+];
+
+for(let i=0; i<matrix.length; i++){
+     for(let j=0; j<matrix[0].length; j++){
+        console.log(matrix[j][i])
+     }
+}
 
 
-// function findTarget(matrix, target){
-//    let result=[];
+//2-> column wise teravrsal
+// let matrix = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9]
+// ];
 
-//    let left=0;
-//    let right=matrix.length-1;
-//    let top=0;
-//    let bottom=matrix[0].length-1;
-
-//    while(left<=right && top<=bottom){
-    
-//     // left to right
-
-//     for(let i=left; i<=right; i++){
-//         result.push(matrix[top][i])
+// for(let j=0; j<matrix[0].length; j++){
+//     for(let i=0; i<matrix.length; i++){
+//         console.log(matrix[j][i])
 //     }
-//     top++
-
-
-//     // top to bottom
-//     for(let i=top; i<=bottom; i++){
-//         result.push(matrix[i][right])
-//     }
-//     right--
-
-//     // right to left
-//     if(top <=bottom){
-//          for(let i=right; i>=left; i--){
-//             result.push(matrix[bottom][i])
-//          }
-//          bottom--
-//     }
-
-//     // bottom to top
-//     if(left<=right){
-//           for(let i=bottom; i>=top; i--){
-//             result.push(matrix[i][left])
-//           }
-//           left++
-//     }
-
-//    }
-
-//    return result.includes(target)
-
 // }
 
-// console.log(findTarget(matrix,target))
 
 
 
 
-
-// find the diagonal sum of matrix
 
 
 
